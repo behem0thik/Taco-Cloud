@@ -12,15 +12,15 @@ import java.util.List;
 @Data
 public class TacoOrder {
 
-    @NotBlank
+    @NotBlank(message = "Delivery name is required")
     private String deliveryName;
-    @NotBlank
+    @NotBlank(message = "Street is required")
     private String deliveryStreet;
-    @NotBlank
+    @NotBlank(message = "City is required")
     private String deliveryCity;
-    @NotBlank
+    @NotBlank(message = "State is required")
     private String deliveryState;
-    @NotBlank
+    @NotBlank(message = "Zip code is required")
     private String deliveryZip;
     @CreditCardNumber(message = "Not a valid credit card number")
     private String ccNumber;
