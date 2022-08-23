@@ -1,5 +1,6 @@
 package tacos.data;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.asm.Type;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.PreparedStatementCreator;
@@ -15,7 +16,7 @@ import java.sql.Types;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-
+@Slf4j
 @Repository
 public class JdbcOrderRepository implements OrderRepository {
 
@@ -63,6 +64,8 @@ public class JdbcOrderRepository implements OrderRepository {
         for (Taco taco : tacos) {
             saveTaco(orderId, i++, taco);
         }
+        log.info("Order saved: {}", order);
+
         return order;
     }
 
@@ -91,6 +94,8 @@ public class JdbcOrderRepository implements OrderRepository {
         taco.setId(tacoId);
 
         saveIngredientRefs(tacoId, taco.getIngredients());
+        log.info("Taco saved: {}", taco);
+
         return tacoId;
     }
 
