@@ -1,7 +1,7 @@
 package tacos.data;
 
 import org.springframework.data.repository.CrudRepository;
-import tacos.TacoOrder;
+import tacos.entity.TacoOrder;
 
 import java.util.List;
 
