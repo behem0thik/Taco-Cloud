@@ -1,17 +1,11 @@
 spring:
-  jpa:
-    hibernate:
-      ddl-auto: update
-    defer-datasource-initialization: false
-    show-sql: true
-    database-platform: org.hibernate.dialect.H2Dialect
+  data:
+    cassandra:
+      keyspace-name: taco_cloud
+      schema-action: recreate
+      local-datacenter: datacenter1
+      username: tacoCloudUsername
+      password: tacoCloudPassword
+      port: 9042
   thymeleaf:
     cache: false
-  datasource:
-    generate-unique-name: false
-    name: Taco-Cloud
-#    url: jdbc:h2:mem:tacocloud
-    username: username
-    password: password
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:./data/tacocloud
