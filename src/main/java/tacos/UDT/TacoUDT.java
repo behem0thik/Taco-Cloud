@@ -1,4 +1,4 @@
-package tacos.entity;
+package tacos.UDT;
 
 import lombok.Data;
 import org.springframework.data.cassandra.core.mapping.UserDefinedType;

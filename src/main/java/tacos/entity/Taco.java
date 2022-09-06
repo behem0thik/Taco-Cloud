@@ -7,6 +7,7 @@ import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
+import tacos.UDT.IngredientUDT;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
