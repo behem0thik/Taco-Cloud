@@ -34,10 +34,15 @@ public class SecurityConfig {
         return http
                 .authorizeRequests()
                 .antMatchers("/design", "/orders")
-                .access("hasRole('USER')")
-                .antMatchers("/", "/**").access("permitAll()")
+                    .access("hasRole('USER')")
+                .antMatchers("/", "/**")
+                    .access("permitAll()")
                 .and()
-                .build();
+                    .formLogin()
+                        .loginPage("/login")
+                        .defaultSuccessUrl("/design")
+                .and()
+                    .build();
     }
 
 }
