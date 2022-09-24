@@ -11,20 +11,22 @@
 <h1>Login</h1>
 <img th:src="@{/images/TacoCloud.jpg}" width="400" height="400"/>
 
-<div th:if="${error}">
-    Unable to login. Check your username and password.
-</div>
-
-<p>New here? Click <a th:href="@{/register}">here</a> to register.</p>
-
 <form method="POST" th:action="@{/login}" id="loginForm">
-    <label for="username"> Username: </label>
-    <input type="text" name="username" id="username"/><br/>
+    <fieldset style="display: inline-grid">
+        <div th:if="${error}">
+            Unable to login. Check your username and password.
+        </div>
 
-    <label for="password"> Password: </label>
-    <input type="text" name="password" id="password"/><br/>
+        <label for="username"> Username: </label>
+        <input type="text" name="username" id="username"/><br/>
 
-    <input type="submit" value="Login"/>
+        <label for="password"> Password: </label>
+        <input type="text" name="password" id="password"/><br/>
+
+        <input type="submit" value="Login"/>
+
+        <p>New here? Click <a th:href="@{/register}">here</a> to register.</p>
+    </fieldset>
 </form>
 </body>
 </html>
