@@ -1,10 +1,9 @@
-package tacos.web;
+package tacos.model.goods;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
-import tacos.entity.Ingredient;
-import tacos.data.IngredientRepository;
+import tacos.repository.IngredientRepository;
 
 @Component
 public class IngredientByIdConverter implements Converter<String, Ingredient> {

@@ -1,7 +1,8 @@
-package tacos.entity;
+package tacos.model.order;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
+import tacos.model.goods.Taco;
 
 import javax.persistence.*;
 import javax.validation.constraints.Digits;

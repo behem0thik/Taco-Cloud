@@ -1,4 +1,4 @@
-package tacos.web;
+package tacos.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
-import tacos.entity.TacoOrder;
-import tacos.data.OrderRepository;
+import tacos.model.order.TacoOrder;
+import tacos.repository.OrderRepository;
 
 import javax.validation.Valid;
 

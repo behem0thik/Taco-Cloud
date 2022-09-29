@@ -1,4 +1,4 @@
-package tacos.entity;
+package tacos.model.goods;
 
 import lombok.Data;
 

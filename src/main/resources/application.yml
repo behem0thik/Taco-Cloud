@@ -4,14 +4,16 @@ spring:
       ddl-auto: update
     defer-datasource-initialization: false
     show-sql: true
-    database-platform: org.hibernate.dialect.H2Dialect
+#    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
   thymeleaf:
     cache: false
   datasource:
     generate-unique-name: false
-    name: Taco-Cloud
-#    url: jdbc:h2:mem:tacocloud
-    username: username
-    password: password
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:./data/tacocloud
+    name: TacoCloud
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/Taco-Cloud
+#    driver-class-name: org.h2.Driver
+#    url: jdbc:h2:file:./data/tacoclou0d
